@@ -1,0 +1,45 @@
+[
+    {
+        "id": "01",
+        "title": "Custom Vehicle Builds",
+        "image": "",
+        "details": [
+            "Complete vehicle customization and modification: We offer comprehensive customization services, from body modifications to engine upgrades and everything in between. Our skilled technicians can transform your vehicle into a one-of-a-kind masterpiece.",
+            "Body kit installation and fabrication: We specialize in installing and fabricating custom body kits that enhance the aesthetics and performance of your vehicle.",
+            "Engine upgrades and performance enhancements: Our team can provide engine tuning, performance chip installations, turbocharger/supercharger upgrades, and other enhancements to boost your vehicle's power and performance.",
+            "Interior customization and upholstery: We can transform your vehicle's interior with custom upholstery, including leather, fabric, or vinyl, tailored to your preferences."
+        ]
+    },
+    {
+        "id": "02",
+        "title": "Paint and Finish Work",
+        "image": "",
+        "details": [
+            "Custom paint jobs and finishes: Our talented painters can create breathtaking custom paint jobs, incorporating unique colors, effects, and graphics to bring your vision to life.",
+            "Two-tone and multi-color paint schemes: We offer expertly executed two-tone and multi-color paint schemes that add depth and visual interest to your vehicle's exterior.",
+            "Clear coat application and polishing: We provide professional clear coat application and meticulous polishing to achieve a flawless, high-gloss finish that enhances the durability and appearance of your paintwork.",
+            "Ceramic coating for enhanced protection: We offer ceramic coating services to provide long-lasting protection for your vehicle's paint, making it more resistant to scratches, UV damage, and contaminants."
+        ]
+    },
+    {
+        "id": "03",
+        "title": "Wheel and Tire Services",
+        "image": "",
+        "details": [
+            "Custom wheel and tire packages: We offer a wide selection of custom wheels and tires, allowing you to choose the perfect combination that matches your vehicle's style and performance requirements.",
+            "Alloy wheel installations and refinishing: Our technicians can professionally install alloy wheels and provide refinishing services to restore their original shine or give them a custom finish.",
+            "Tire rotation and maintenance services: We provide tire rotation services to ensure even tread wear and offer maintenance services such as tire pressure checks and inflation"
+        ]
+    },
+    {
+        "id": "04",
+        "title": "Lighting Upgrades",
+        "image": "",
+        "details": [
+            "LED and HID headlight conversions: We offer LED and HID headlight conversions to improve visibility and give your vehicle a modern and stylish appearance.",
+            "Custom lighting installations (interior and exterior): We specialize in installing custom lighting solutions, including ambient lighting, underglow lighting, and accent lighting, to create unique visual effects.",
+            "Taillight and brake light enhancements: We provide options for upgrading taillights and brake lights, including LED conversions, smoked lenses, and custom designs, for improved safety and aesthetics",
+            "Fog light upgrades and replacements: Our team can upgrade or replace your vehicle's fog lights with high-performance options that enhance visibility in adverse weather conditions."
+        ]
+    }
+]

@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
-  font-family: "Montserrat";
+  background-color: #100F0F;
+  font-family: "Raleway";
+}
+
+@font-face {
+  font-family: "RightGrotest";
+  src: url(./assets//fonts/RightGrotesk-WideMedium.otf);
+  font-size: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "RightGrotest";
 }
