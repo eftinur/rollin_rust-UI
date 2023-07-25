@@ -3,13 +3,13 @@ import React from "react";
 const Team = () => {
   return (
     <div className="container mx-auto py-32">
-      <div className="w-3/5">
-        <h2 className="animate-gradient-text text-8xl uppercase ">
-          PRACTISED IN DOING THINGS FOR THE FIRST TIME.
+      <div className="w-3/4 lg:w-2/4 mx-auto">
+        <h2 className="animate-gradient-text text-5xl md:text-7xl lg:text-8xl text-center capitalize ">
+        Keep your vehicle safe with us.
         </h2>
       </div>
       {/* Photo Gallery */}
-      <div className="grid grid-cols-3 gap-2 text-white mt-20">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 text-white mt-20">
         <div className="col-span-1 grid gap-y-2">
           <div>
             <img

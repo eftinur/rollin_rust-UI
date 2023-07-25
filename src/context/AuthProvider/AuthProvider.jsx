@@ -1,13 +1,12 @@
-import { createContext } from "react";
-import app from "../../firebase/firebase.config";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
+  getAuth,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  signOut
 } from "firebase/auth";
-import { useState } from "react";
-import { useEffect } from "react";
+import { createContext, useEffect, useState } from "react";
+import app from "../../firebase/firebase.config";
 
 export const AUTH_CONTEXT = createContext();
 const auth = getAuth(app);
@@ -26,11 +25,12 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // Handles Firebase user-Data Persistency
+  // Handles Google Firebase user-Data Persistency
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log(currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
 
     return () => {
@@ -38,12 +38,18 @@ const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  // contextAPI Values
+  // Handles Google Firebase user_sign-out
+  const logOut = () => {
+    return signOut(auth);
+  };
+
+  // contextAPI Values to use across the application
   const value = {
     user,
     loading,
     createUser,
     signIn,
+    logOut,
   };
 
   return (

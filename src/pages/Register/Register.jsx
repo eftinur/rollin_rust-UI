@@ -25,12 +25,15 @@ const Register = () => {
   return (
     <div className="py-32">
       <div className="container mx-auto text-white">
-        <div className="w-2/4 mx-auto">
-          <h5 className="animate-gradient-text text-6xl text-center uppercase ">
+        <div className="w-full lg:w-2/4 mx-auto px-8">
+          <h5 className="animate-gradient-text text-4xl lg:text-7xl text-center capitalize">
             Register to book our services Now!
           </h5>
         </div>
-        <form onSubmit={handleRegister} className="w-2/4 mx-auto py-12 px-8">
+        <form
+          onSubmit={handleRegister}
+          className="w-full lg:w-2/4 mx-auto py-12 px-8"
+        >
           <input
             placeholder="First name"
             className="input"

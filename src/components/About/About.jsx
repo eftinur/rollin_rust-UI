@@ -1,16 +1,14 @@
 const About = () => {
   return (
     <div className="bg-white py-20 px-8">
-      <div className="container mx-auto flex items-center mt-10">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-x-4 gap-y-8 mt-10">
         <div className="flex-1">
-          <div className="w-4/5 mx-auto">
-            <h2 className="animate-gradient-text text-8xl uppercase  px-4">
-              TODAY IS A GOOD DAY TO TAKE UP THE OPPORTUNITY.
-            </h2>
-          </div>
+          <h2 className="animate-gradient-text text-5xl md:text-7xl lg:text-8xl capitalize  px-4">
+            Today is a Good day to take up the opportunity.
+          </h2>
         </div>
-        <div className="w-1/4 border border-[#0F0FDC] rounded-md mt-4 py-4 px-8">
-          <h5 className="text-4xl uppercase mb-6">
+        <div className="w-full md:w-2/4 lg:w-1/4 border border-[#0F0FDC] rounded-md mt-4 py-4 px-4 lg:px-8">
+          <h5 className="text-4xl capitalize mb-6">
             Let’s build the new normal.
           </h5>
           <p className="font-medium">

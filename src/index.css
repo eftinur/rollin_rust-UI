@@ -6,13 +6,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #100F0F;
-  font-family: "Raleway";
+  background-color: #100f0f;
+  font-family: "Montserrat", sans-serif;
 }
 
 @font-face {
-  font-family: "RightGrotest";
-  src: url(./assets//fonts/RightGrotesk-WideMedium.otf);
+  font-family: "AndersonGrotesk";
+  src: url(./assets//fonts/AndersonGrotesk-Black.otf);
   font-size: normal;
 }
 
@@ -22,5 +22,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "RightGrotest";
+  font-family: "AndersonGrotesk", sans-serif;
 }
