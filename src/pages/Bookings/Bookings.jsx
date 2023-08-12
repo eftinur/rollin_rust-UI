@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { AUTH_CONTEXT } from "../../context/AuthProvider/AuthProvider";
+
 const Bookings = () => {
   const { user } = useContext(AUTH_CONTEXT); // Getting user Data to run a Query in the API
   const [bookings, setBookings] = useState([]);
@@ -20,7 +22,7 @@ const Bookings = () => {
       .then((data) => {
         if (data.deletedCount > 0) {
           // it'll be replaced with React Tositify
-          alert("Deleted Successfully");
+          toast.success("Deleted Successfullt");
           // Filtering remaining bookings later it'll be replaced with TanStack Query
           const remaining = bookings.filter((el) => el._id !== id);
           setBookings(remaining);

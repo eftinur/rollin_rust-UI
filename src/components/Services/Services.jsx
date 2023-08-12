@@ -36,8 +36,8 @@ const Services = () => {
       ) : (
         <div className="w-full lg:w-3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-16 px-4">
           {data?.map((service) => (
-            <div key={service._id} className="w-full mx-auto bg-white px-6 py-8 text-black rounded-lg">
-              <div className="mb-6 rounded-lg">
+            <div key={service._id} className="w-full mx-auto bg-white px-8 py-5 text-black rounded-lg">
+              <div className="mb-8 rounded-lg">
                 <img
                   src={service?.image}
                   alt=""
@@ -45,7 +45,7 @@ const Services = () => {
                 />
               </div>
 
-              <p className="text-2xl lg:text-3xl font-bold mb-4">
+              <p className="text-xl lg:text-2xl font-bold mb-4">
                 {service?.title}
               </p>
 

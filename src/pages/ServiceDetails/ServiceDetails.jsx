@@ -24,11 +24,16 @@ const ServiceDetails = () => {
   }, [pathname]);
 
   return (
-    <>
+    <div className="container mx-auto py-32">
+      <div className="w-full lg:w-2/4 mx-auto px-4">
+        <h2 className="animate-gradient-text text-4xl md:text-7xl text-center capitalize font-bold py-8">
+        Sharing smile through car caring
+        </h2>
+      </div>
       {isLoading ? (
         <MyLoader />
       ) : (
-        <div className="container mx-auto text-white pt-32 border-b pb-20">
+        <div className="w-11/12 mx-auto text-white py-12">
           <div className="flex flex-col lg:flex-row gap-12 px-6 rounded-lg">
             <img
               src={service?.image}
@@ -41,7 +46,7 @@ const ServiceDetails = () => {
               </p>
               <p className="mb-2">
                 Price:
-                <span className="text-xl font-medium">${service?.price}</span>
+                <span className="text-xl font-medium px-2">${service?.price}</span>
               </p>
               <p className="text-base lg:text-xl mt-6">Package Includes:</p>
               {service.details?.map((el, index) => (
@@ -74,13 +79,7 @@ const ServiceDetails = () => {
           {/* Commenting Feature */}
         </div>
       )}
-      <div className="text-white text-center py-32">
-        <p>Call us anytime!</p>
-        <p className="text-3xl lg:text-5xl font-bold my-4">HELPLINE</p>
-        <p className="pb-2">+222 447 555</p>
-        <p>rollinrust@helpline.com</p>
-      </div>
-    </>
+    </div>
   );
 };
 

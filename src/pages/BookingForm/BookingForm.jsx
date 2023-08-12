@@ -47,7 +47,7 @@ const BookingForm = () => {
         console.log(data);
         if (data.acknowledged) {
           e.target.reset();
-          toast.success("Welcome to Rollin Rust");
+          toast.success("Booking Confirmed");
         }
       });
   };

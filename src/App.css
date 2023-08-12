@@ -180,7 +180,7 @@ header {
   box-shadow: inset 0 0 1.6em -0.6em #007af1;
   overflow: hidden;
   position: relative;
-  height: 2.8em;
+  height: 3.2em;
   padding-right: 3.3em;
 }
 
@@ -191,8 +191,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
+  height: 2.4em;
+  width: 2.4em;
   border-radius: 10px;
   box-shadow: 0.1em 0.1em 0.6em 0.2em #007af1;
   right: 0.3em;
