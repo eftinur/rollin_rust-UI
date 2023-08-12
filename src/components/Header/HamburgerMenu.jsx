@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import { useContext, useEffect, useRef } from "react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AUTH_CONTEXT } from "../../context/AuthProvider/AuthProvider";
 
@@ -24,7 +23,6 @@ const HamburgerMenu = ({ menuState }) => {
   let line2 = useRef(null);
   let line3 = useRef(null);
   let line4 = useRef(null);
-  let info = useRef(null);
 
   useEffect(() => {
     if (menuState.taped === false) {
@@ -53,7 +51,6 @@ const HamburgerMenu = ({ menuState }) => {
           amount: 0.07,
         },
       });
-      fadeInUp(info);
       staggerLinks(line1, line2, line3, line4);
     }
   }, [menuState]);
@@ -92,60 +89,30 @@ const HamburgerMenu = ({ menuState }) => {
               <nav className="w-3/4">
                 <ul>
                   {/* Navigating with React Router */}
-                  <li
-                    ref={(el) => (line1 = el)}
-                    className="w-full lg:w-[700px] h-[80px] lg:h-[90px] text-4xl lg:text-6xl font-light"
-                  >
+                  <li ref={(el) => (line1 = el)} className="text-2xl">
                     <Link to="/">Home</Link>
                   </li>
-                  <li
-                    ref={(el) => (line2 = el)}
-                    className="w-full lg:w--[700px] h-[80px] lg:h-[90px] text-4xl lg:text-6xl font-light"
-                  >
+                  <li ref={(el) => (line2 = el)} className="text-2xl">
                     <Link to="/services">Services</Link>
                   </li>
-                  <li
-                    ref={(el) => (line3 = el)}
-                    className="w-full lg:w--[700px] h-[80px] lg:h-[90px] text-4xl lg:text-6xl font-light"
-                  >
+                  <li ref={(el) => (line3 = el)} className="text-2xl">
                     <Link to="/bookings">My Bookings</Link>
                   </li>
                   {user ? (
-                    <li
-                      ref={(el) => (line4 = el)}
-                      className="w-full lg:w--[700px] h-[80px] lg:h-[90px] text-4xl lg:text-6xl font-light"
-                    >
-                      <button onClick={handleLogOut} className="form_btn">
+                    <li ref={(el) => (line4 = el)} className="">
+                      <button onClick={handleLogOut} className="form_btn py-2">
                         Sign-out
                       </button>
                     </li>
                   ) : (
-                    <li
-                      ref={(el) => (line4 = el)}
-                      className="w-full lg:w--[700px] h-[80px] lg:h-[90px] text-4xl lg:text-6xl font-light"
-                    >
-                      <Link to="/register">Register</Link>
+                    <li ref={(el) => (line4 = el)} className="">
+                      <button className="form_btn py-2">
+                        <Link to="/register">Register</Link>
+                      </button>
                     </li>
                   )}
                 </ul>
               </nav>
-              <div
-                ref={(el) => (info = el)}
-                className="info w-full lg:w-[320px] mt-12"
-              >
-                <span className="text-2xl block mb-4">Get in touch:</span>
-                <div className="w-fit flex gap-8 text-xs">
-                  <a href="">
-                    <FaInstagram size={24} />
-                  </a>
-                  <a href="">
-                    <FaTwitter size={24} />
-                  </a>
-                  <a href="">
-                    <FaYoutube size={24} />
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>

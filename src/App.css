@@ -1,18 +1,7 @@
-.hero_content {
-  z-index: 70;
-}
-
-.hero_image {
-  z-index: 60;
-}
-
 /* Main UI CSS */
 /* GSAP Navigation */
 header {
   position: relative;
-  /* top: 0; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
   width: 100%;
   z-index: 90;
 }
@@ -91,7 +80,7 @@ header {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background: #7b52b9;
+  background: #007af1;
   width: 100%;
   height: 100%;
 }
@@ -110,9 +99,6 @@ header {
 .menu_tags {
   position: relative;
   top: 200px;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   gap: 48px;
 }
 
@@ -124,35 +110,18 @@ header {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  margin: 16px 0;
 }
 
 .menu_tags ul li a {
-  /* position: absolute; */
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  text-transform: capitalize;
+  font-weight: 500;
+  text-transform: capitalize font-bold;
   color: #1e1e1e;
   transition: all ease-in-out 0.3s;
 }
 
 .menu_tags ul li a:hover {
   color: #1e1e1e;
-}
-
-.info {
-  width: 300px;
-  color: #1e1e1e;
-}
-
-.info h3 {
-  text-transform: uppercase;
-  margin: 8px auto;
-  margin-bottom: 18px;
-}
-
-.info p {
-  font-size: 0.8rem;
-  margin: 0 auto;
 }
 
 /* Header Gradient Animated Text */
@@ -191,24 +160,24 @@ header {
 }
 
 .input:focus {
-  border: 1px solid #7b52b9;
-  box-shadow: 0 0 0 4px #7b52b9;
+  border: 1px solid #007af1;
+  box-shadow: 0 0 0 4px #007af1;
 }
 
 /* General Button */
 .cssbuttons-io-button {
-  background: #a370f0;
+  background: #007af1;
   color: white;
-  font-family: inherit;
+  font-family: "Montserrat", sans-serif;
   padding: 0.35em;
   padding-left: 1.2em;
   font-weight: 500;
-  border-radius: 12px;
+  border-radius: 10px;
   border: none;
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
-  box-shadow: inset 0 0 1.6em -0.6em #714da6;
+  box-shadow: inset 0 0 1.6em -0.6em #007af1;
   overflow: hidden;
   position: relative;
   height: 2.8em;
@@ -224,8 +193,8 @@ header {
   justify-content: center;
   height: 2.2em;
   width: 2.2em;
-  border-radius: 12px;
-  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  border-radius: 10px;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #007af1;
   right: 0.3em;
   transition: all 0.3s;
 }
@@ -237,7 +206,7 @@ header {
 .cssbuttons-io-button .icon svg {
   width: 1.1em;
   transition: transform 0.3s;
-  color: #7b52b9;
+  color: #007af1;
 }
 
 .cssbuttons-io-button:hover .icon svg {
@@ -248,31 +217,67 @@ header {
   transform: scale(0.95);
 }
 
+@media (max-width: 768px) {
+  .cssbuttons-io-button {
+    background: #007af1;
+    font-size: small;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #007af1;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+  }
+
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 10px;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #007af1;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+}
+
 /* Form Button */
 .form_btn {
   width: fit-content;
   position: relative;
   display: inline-block;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  padding: 12px 20px;
   text-align: center;
   font-size: 14px;
-  text-transform: capitalize;
+  text-transform: capitalize font-bold;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #7b52b9;
+  color: #007af1;
   background: transparent;
   cursor: pointer;
   transition: ease-out 0.5s;
-  border: 2px solid #7b52b9;
+  border: 1px solid #007af1;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 0 #7b52b9;
+  box-shadow: inset 0 0 0 0 #007af1;
 }
 
 .form_btn:hover {
   color: white;
-  box-shadow: inset 0 -100px 0 0 #7b52b9;
+  box-shadow: inset 0 -100px 0 0 #007af1;
 }
 
 .form_btn:active {
@@ -284,18 +289,19 @@ header {
 /* Bookings Table */
 table {
   width: 100%;
-  background: #fff;
-  color: #1e1e1e;
   border-collapse: collapse;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
   margin-top: 2rem;
+  color: #fff;
 }
 
-caption,
-th,
+th {
+  padding: 1.5rem;
+  background: #fff;
+  color: #1e1e1e;
+}
+
 td {
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 caption,
@@ -304,64 +310,145 @@ th {
 }
 
 caption {
-  background-color: #1e1e1e;
-  font-size: 1.5rem;
-  font-family: "AndersonGrotesk", sans-serif;
-  color: #fff;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  /* background-color: #1e1e1e; */
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 2.5rem 1rem;
 }
 
 th {
-  background-color: rgba(30, 30, 30, 0.7);
-  color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  border-bottom: 0.25px solid hsl(0, 1%, 52%);
 }
 
-tr:nth-of-type(2n) {
-  background-color: rgba(30, 30, 30, 0.1);
-  color: #1e1e1e;
+td {
+  font-size: 1.25rem;
+  border-bottom: 0.25px solid hsl(0, 1%, 52%);
 }
 
-tr td p {
+td > p {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 650px) {
+/* Table For Mobile Devices */
+@media (max-width: 768px) {
   th {
     display: none;
   }
 
+  thead > tr {
+    border: none;
+  }
+
+  tr {
+    border-top: 0.25px solid hsl(0, 1%, 52%);
+    border-bottom: 0.25px solid hsl(0, 1%, 52%);
+  }
+
   td {
+    /* font-size: 1rem; */
     display: block;
+    border: none;
     padding: 0.5rem 1rem;
   }
 
+  td > p {
+    display: inline-block;
+    font-size: 1rem;
+  }
+
   td::before {
-    font-weight: 700;
-    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: normal;
+    text-transform: capitalize font-bold;
+    margin-right: 4px;
   }
 
   td:nth-of-type(1)::before {
-    content: "Serial no." ": ";
+    content: "Serial no" ": ";
+    font-size: 0.8rem;
   }
   td:nth-of-type(2)::before {
     content: "service Details" ": ";
-    display: block;
-    margin-bottom: 0.5rem;
+    /* display: block; */
+    padding-bottom: 1rem;
   }
   td:nth-of-type(3)::before {
     content: "customer Details" ": ";
-    display: block;
-    margin-bottom: 0.5rem;
+    /* display: block; */
+    padding-bottom: 1rem;
   }
+
   td:nth-of-type(4)::before {
-    content: "payment" ": ";
-    display: block;
-    margin-bottom: 0.5rem;
+    content: "Action" ": ";
+    /* display: block; */
+    padding-bottom: 1rem;
   }
-  td:nth-of-type(5)::before {
-    content: "Delete" ": ";
-    display: block;
-    margin-bottom: 0.5rem;
+}
+
+/* My Loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  width: 48px;
+  height: 5px;
+  background: rgba(8, 59, 169, 0.5);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  border-radius: 50%;
+  animation: shadow324 0.5s linear infinite;
+}
+
+.loader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #007af1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+  animation: jump7456 0.5s linear infinite;
+}
+
+@keyframes jump7456 {
+  15% {
+    border-bottom-right-radius: 3px;
+  }
+
+  25% {
+    transform: translateY(9px) rotate(22.5deg);
+  }
+
+  50% {
+    transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+    border-bottom-right-radius: 40px;
+  }
+
+  75% {
+    transform: translateY(9px) rotate(67.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+@keyframes shadow324 {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.2, 1);
   }
 }

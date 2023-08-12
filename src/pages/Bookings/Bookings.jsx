@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { AUTH_CONTEXT } from "../../context/AuthProvider/AuthProvider";
-
 const Bookings = () => {
   const { user } = useContext(AUTH_CONTEXT); // Getting user Data to run a Query in the API
   const [bookings, setBookings] = useState([]);
@@ -30,54 +29,46 @@ const Bookings = () => {
   };
 
   return (
-    <div className="container min-h-screen mx-auto px-4 py-28">
-      <div>
-        <p>Table_in_React</p>
-        <div className="text-xs">
-          <table>
-            {/* Caption Tag Always has to be the immediate child. its the convention */}
-            <caption>Your Bookings Details</caption>
-            {/* Table Header */}
-            <thead>
-              <tr>
-                <th>Serial no.</th>
-                <th>Service Details</th>
-                <th>Customer Details</th>
-                <th>Payment</th>
-                <th>Delete</th>
+    <div className="container min-h-screen mx-auto px-4 py-14">
+      <div className="text-xs">
+        <table>
+          {/* Caption Tag Always has to be the immediate child. its the convention */}
+          <caption className="animate-gradient-text text-4xl lg:text-7xl text-center capitalize font-bold py-8">
+            Your Bookings Details
+          </caption>
+          {/* Table Header */}
+          <thead>
+            <tr>
+              <th>Serial no.</th>
+              <th>Service Details</th>
+              <th>Customer Details</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          {/* Table Rows and Columns */}
+          <tbody>
+            {bookings?.map((booking, index) => (
+              <tr key={index}>
+                <td>{(index += 1)}</td>
+                <td>
+                  <p>{booking?.serviceName}</p>
+                </td>
+                <td>
+                  <p>{booking?.email}</p>{" "}
+                </td>
+                <td>
+                  <button
+                    onClick={() => handleDelete(booking?._id)}
+                    className="px-4 py-2 bg-[#007af1] rounded-lg text-sm"
+                  >
+                    {/* <CiSquareRemove size={32} /> */}
+                    Delete
+                  </button>
+                </td>
               </tr>
-            </thead>
-            {/* Table Rows and Columns */}
-            <tbody>
-              {bookings?.map((booking, index) => (
-                <tr key={index}>
-                  <td>{(index += 1)}</td>
-                  <td>
-                    <p className="text-base font-medium">
-                      {booking?.serviceName}
-                    </p>{" "}
-                    <p>${booking?.price}</p>
-                  </td>
-                  <td>
-                    <p className="text-base font-medium">{booking?.email}</p>{" "}
-                    <p>{booking?.phone}</p>
-                  </td>
-                  <td>
-                    <button className="form_btn">Pay</button>
-                  </td>
-                  <td>
-                    <button
-                      onClick={() => handleDelete(booking?._id)}
-                      className="form_btn"
-                    >
-                     x
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

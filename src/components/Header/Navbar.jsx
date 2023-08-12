@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import rollin_rust from "../../assets/pookatales.png";
+import rollin_rust from "../../assets/rollin_rust.png";
 import { AUTH_CONTEXT } from "../../context/AuthProvider/AuthProvider";
 import HamburgerMenu from "./HamburgerMenu";
 
@@ -74,34 +74,36 @@ const Navbar = () => {
       <div className="container mx-auto px-2">
         <div className="header_wrapper">
           <div className="inner_header">
-            <div className="logo_wrapper w-24 lg:w-32">
+            <div className="logo_wrapper w-20 lg:w-32 py-2">
               <Link to="/">
                 <img className="w-full" src={rollin_rust} alt="" />
               </Link>
             </div>
             <div className="flex items-center">
               <>
-                <ul className="hidden lg:flex items-center gap-4">
+                <ul className="hidden lg:flex items-center gap-8">
                   <li>
                     <Link to="/">Home</Link>
                   </li>
                   <li>
                     <Link to="/services">Services</Link>
-                  </li>{" "}
-                  <li>
-                    <Link to="/bookings">My Bookings</Link>
                   </li>
                   {/* Conditionally rendering Navigation Menu depending on user_sign-in */}
                   {user ? (
-                    <li>
-                      <button onClick={handleLogOut} className="form_btn">
-                        Sign-out
-                      </button>
-                    </li>
+                    <>
+                      <li>
+                        <Link to="/bookings">My Bookings</Link>
+                      </li>
+                      <li>
+                        <button onClick={handleLogOut} className="form_btn">
+                          Sign-out
+                        </button>
+                      </li>
+                    </>
                   ) : (
                     <li>
                       <Link to="/register">
-                        <button className="form_btn">Register/Sign-in</button>
+                        <button className="form_btn">Register</button>
                       </Link>
                     </li>
                   )}

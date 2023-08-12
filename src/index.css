@@ -6,14 +6,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #100f0f;
+  background-color: #20262e;
   font-family: "Montserrat", sans-serif;
-}
-
-@font-face {
-  font-family: "AndersonGrotesk";
-  src: url(./assets//fonts/AndersonGrotesk-Black.otf);
-  font-size: normal;
 }
 
 h1,
@@ -21,6 +15,10 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "AndersonGrotesk", sans-serif;
+h6,
+caption {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 3px;
 }
